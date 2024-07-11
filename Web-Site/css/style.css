@@ -1,0 +1,856 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* assing variables */
+
+:root {
+    
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #F4F4F4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+
+
+/* navbar */
+
+/* removes padding and margin */
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* set line height spacing and font family */
+body {
+
+    font-family: 'lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* removes the bullet points form the li / ul  */
+ul {
+
+    list-style-type: none;
+}
+
+/* removes the underline form the hyperlink */
+a {
+
+    text-decoration: none;
+    color: #333;
+}
+
+/* setting padding and font weight on h1 and h2  */
+h1, h2 {
+
+font-weight: 300;
+line-height: 1.2;
+margin: 10px 0px;
+
+}
+
+/* setting the margin on the paragraphs */
+
+p {
+
+    margin: 10px 0px;
+}
+
+/* all img default of 100% */
+img {
+
+    width:100%;
+}
+code, pre {
+
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+
+
+/* styling the navbar */
+
+.navbar {
+
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+
+}
+
+/* this makes the u list a flex box so we can align the  */
+.navbar ul {
+
+    display: flex;
+    
+}
+
+/* this sets the links to a color  */
+
+.navbar a {
+
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    
+
+}
+
+/* this creates a border at the bottom of the item and highlihgts the solid white line hen in hoover */
+
+.navbar a:hover {
+
+    border-bottom: 2px #fff solid;
+
+}
+
+/* this is aimed at the navbar as in general you would want to justify spae betweenthis pushes them apart for a better look */
+
+.navbar .flex {
+
+    justify-content: space-between;
+}
+
+/* sets a max width on the container and margin 0 auto oveflow allows the top margin on the nabar to fill in the sapce to of the screen */
+
+/* Utilities */
+
+.container {
+
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+/* this is setting the home feature links to align as a flex box */
+
+.flex {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/*  the showcase section creaets a grid adds 2 columns a gap and justify also use 100% of the grid container 
+to 400px that is specified in the showcase section below*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+/* any card item takes this as a default */
+
+.card {
+ 
+    background-color: #fff;
+    color: #333;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    padding: 10px;
+    margin: 10px;
+}
+
+/* any btn item takes this as a default */
+.btn {
+
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* any btn-outline item takes this as a default */
+.btn-outline {
+    background-color: transparent;
+    border: 1px #fff solid;
+
+}
+
+/* anything with a grid-3 class takes this as a default*/
+
+.grid-3 {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* shrinks the size of the button on hovver */
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+/* background and  colored buttons */
+
+.bg-primary, .btn-primary {
+
+background-color: var(--primary-color);
+color: #fff;
+
+}
+
+.bg-secondary, .btn-secondary {
+
+    background-color: var(--secondary-color);
+    color: #fff;
+    
+    }
+
+.bg-dark, .btn-dark {
+
+        background-color: var(--dark-color);
+        color: #fff
+        
+        }
+
+
+.bg-light, .btn-light {
+
+            background-color: var(--light-color);
+            color: #fff;
+            
+            }
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+
+    color: #fff;    
+}
+
+/* test colors */
+.text-primary {
+
+   color: var(--primary-color);
+    
+    
+    }
+    
+    .text-secondary {
+    
+        color: var(--secondary-color);
+      
+        
+        }
+    
+    .text-dark {
+    
+            color: var(--dark-color);
+        
+            
+            }
+    
+    
+    .text-light {
+    
+               color: var(--light-color);
+               
+                
+                }
+
+
+
+/* text sizes */
+
+.lead {
+
+    font-size: 20px;
+    }
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+
+    font-size: 2rem;
+}
+
+.lg {
+
+    font-size: 4rem;
+}
+
+.xl {
+
+    font-size: 4rem;
+}
+
+.text-center {
+
+    text-align: center;
+}
+
+/* docs */
+
+.alert {
+
+    background: var(--light-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.alert i {
+
+    margin-right: 10px;
+}
+
+.alert-success {
+background-color: var(--success-color);
+color: #fff;
+
+}
+
+.alert-error {
+    background-color: var(--error-color);
+    color: #fff;
+    
+    }
+
+/* showcase sets the section height to 400px color using a variable and relative  */
+
+.showcase {
+
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+/* set the overflow of the card to visable */
+.showcase .grid {
+
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+
+}
+.showcase h1 {
+
+    font-size: 40px ;
+}
+
+.showcase p {
+  
+    margin:  20px;
+}
+
+.showcase-text {
+
+    animation: SlideInFromLeft 1s ease-in;
+}
+.showcase-form {
+
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 2;
+    animation: SlideInFromRight 1s ease-in;
+
+
+}
+
+.showcase-form .form-control {
+
+margin: 30px;
+
+}
+
+/* this removes the outline of the form  */
+.showcase-form input:focus {
+    outline: none;
+
+
+}
+
+.showcase::before,
+.showcase::after {
+
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+}
+
+/* this targets the input windows but not the submit button */
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+
+border: 0;
+border-bottom: 1px solid #b4becb;
+width: 100%;
+padding: 3px;
+font-size: 16px;
+
+}
+
+
+/* stats section */
+
+/* this adds padding as the icons go under the skew of the top section */
+.stats {
+
+    padding-top: 100px;
+}
+
+.stats-heading {
+
+max-width: 500px;
+margin: auto;
+
+}
+
+.stats .grid-3 h3 {
+    font-size: 35px;;
+
+}
+
+.stats .grid-3 p {
+  
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+/* cli grid  */
+
+.cli .grid {
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.cli .grid > *:first-child {
+
+    grid-column: 1 / span 2 ;
+    grid-row: 1 / span 2;
+    padding: 20px;
+
+    
+}
+
+
+
+.cli .grid .card {
+
+    text-align: center;
+}
+
+/* cloud */
+
+.cloud .grid {
+
+    grid-template-columns: 4fr 3fr;
+
+
+}
+
+
+
+/* languages */
+
+
+.languages .flex {
+
+    flex-wrap: wrap;
+}
+
+.languages .card {
+
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.3s ease-in;
+
+}
+
+.languages .card h4 {
+
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover {
+     transform: translateY(-15px);
+
+}
+
+
+/* features */
+
+.features-head img {
+
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.features-sub-head img, .docs-head img {
+    
+    width: 200px;
+    justify-self: flex-end;
+
+}
+
+.features-sub-head .grid p ,h1 {
+
+    color: var(--dark-color)
+}
+
+.features-main .card i {
+margin-right: 20px;
+
+}
+
+.features-main .grid {
+
+    padding: 30px;
+    
+    
+}
+
+.features-main .grid >*:first-child {
+
+    grid-column: 1 / span 3 ;
+    
+}
+
+.features-main .grid >*:nth-child(2){
+
+    grid-column: 1 / span 2;
+    
+}
+
+/* docs */
+
+.docs-main h3 {
+
+    margin: 20px 0;
+}
+
+.docs-main.grid {
+
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+
+
+}
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+
+}
+.docs-main nav li:hover {
+    font-weight: bold;
+
+}
+.docs-main h3 {
+
+    color: #333;
+}
+
+
+/* footer */
+
+.footer .social a {
+
+    margin: 0 10px;
+}
+
+
+.footer nav ul li {
+
+    padding-top: 3px;
+}
+
+@keyframes SlideInFromLeft {
+
+    0% {
+
+    transform:  translateX(-100%);
+
+    }
+    
+    100% {
+    transform: translateX(0);
+
+    }
+}
+
+@keyframes SlideInFromRight {
+
+    0% {
+
+    transform:  translateX(100%);
+
+    }
+    
+    100% {
+    transform: translateX(0);
+
+    }
+}
+
+@keyframes SlideInfromTop {
+
+    0% {
+
+    transform:  translateY(100%);
+
+    }
+    
+    100% {
+    transform: translateX(0);
+
+    }
+}
+
+@keyframes SlideInfromBottom {
+
+    0% {
+
+    transform:  translateY(100%);
+
+    }
+    
+    100% {
+    transform: translateX(0);
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Tablets and under  */
+
+@media(max-width: 768px) {
+
+.grid,
+.showcase .grid,
+.stats .grid,
+.cli .grid,
+.cloud .grid,
+.features-main .grid,
+.docs-main .grid {
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+
+}
+
+.showcase {
+    height: auto;
+}
+
+.showcase-text {
+
+    text-align: center;
+    margin-top: 40px;
+ 
+
+}
+
+.showcase-form {
+    justify-self: center;
+    margin: auto;
+    
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1; 
+    grid-row: 1;
+}
+
+.features-head,
+.features-sub-head,
+.docs-head {
+    text-align: center;
+}
+
+.features-head img,
+.features-sub-head img ,
+.docs-head img {
+    justify-self: center;
+}
+
+.features-main .grid > *:first-child,
+.features-main .grid > *:nth-child(2) {
+
+    grid-column: 1;
+}
+
+
+
+/* mobile */
+
+@media(max-width: 500px) {
+
+    .navbar  {
+     height: 110px; 
+}
+
+
+    .navbar .flex {
+        flex-direction: column;
+        overflow:hidden;
+
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1)
+
+    }
+
+    .cli .grid > *:first-child {
+
+        object-fit: fill;
+    }
+
+
+
+}
+
+/* margins */
+
+.my-1 {
+
+    margin: 1rem 0;
+}
+
+.my-2{
+
+    margin: 1.5rem 0;
+}
+
+.my-3{
+
+    margin: 2rem 0;
+}
+
+.my-4{
+
+    margin: 3rem 0;
+}
+
+.my-5{
+
+    margin: 4rem 0;
+}
+
+.m-1 {
+
+    margin: 1rem;
+}
+
+.m-2{
+
+    margin: 1.5rem;
+}
+
+.m-3{
+
+    margin: 2rem;
+}
+
+.m-4{
+
+    margin: 3rem;
+}
+
+.m-5{
+
+    margin: 4rem;
+}
+
+/* padding */
+
+.py-1 {
+
+    padding: 1rem;
+}
+
+.py-2{
+
+    padding: 1.5rem;
+}
+
+.py-3{
+
+    padding: 2rem;
+}
+
+.py-4{
+
+    padding: 3rem;
+}
+
+.py-5{
+
+    padding: 4rem;
+}
+
+
+.p-1 {
+
+    padding: 1rem;
+}
+
+.p-2{
+
+    padding: 1.5rem;
+}
+
+.p-3{
+
+    padding: 2rem;
+}
+
+.p-4{
+
+    padding: 3rem;
+}
+
+.p-5{
+
+    padding: 4rem;
+}

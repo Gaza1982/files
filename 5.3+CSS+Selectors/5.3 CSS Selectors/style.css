@@ -1,0 +1,32 @@
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+
+/* Write your CSS below, don't change the rules above. */
+
+/* all paragraphs elements in red text*/
+p {
+  color: red;
+}
+/* all class selector */
+.note {
+  font-size: 20px;
+}
+
+/* id selector*/
+#id-selector-demo {
+color: green;
+}
+
+/* attribute selector and based on attributes and values*/
+
+li[value="4"] {
+  color: blue;
+}
+
+/* universal selector*/
+* {
+  text-align: center;
+}

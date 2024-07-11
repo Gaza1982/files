@@ -1,0 +1,30 @@
+/* Write your code here: */
+
+/*group selector with a , */
+
+h1,h2 {
+color: blueviolet;
+}
+
+/* child selector with a > only one generation deep*/
+
+.box > p {
+    color: firebrick;
+}
+
+/* Descendant combination selector selector can be multiple levels up not just direct descendant */
+
+.box li {
+    color: blue;
+}
+
+/* Chaining selectorselector where all of  the selectors are tue nospaces*/
+
+li.done {
+    color: seagreen;
+}
+
+ul p.done {
+    font-size: 0.5em;
+
+}

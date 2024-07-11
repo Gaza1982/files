@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+* {
+
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+
+}
+
+
+body {
+
+    background: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 5px;
+
+}
+
+/* this is targeting the grid items and we want to make this in to a flex box*/
+
+.grid-container > div {
+
+        height: 400px;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+
+}
+
+/* this is defining the images as backups  */
+
+.bg1 {
+
+    background: url('./img/bg1.jpg');
+
+}
+
+.bg2 {
+
+    background: url('./img/bg2.jpg');
+
+}
+.bg3 {
+
+    background-color: #94bfac80;
+    
+
+}
+
+.grid-container > div:nth-of-type(1) {
+    grid-column:  1 / 5
+    
+ 
+}
+
+ 
+.grid-container > div:nth-of-type(2) {
+    grid-column:  1 / 2
+    
+ 
+}
+
+.grid-container > div:nth-of-type(3) {
+    grid-column:  2 / 3
+    
+ 
+}
+
+.grid-container > div:nth-of-type(4) {
+    grid-column:  3 / 4
+    
+ 
+}
+
+.grid-container > div:hover {
+
+opacity: 0.7;
+transform: scale(0.98);
+
+
+}
+
+.contact {
+display: flex;
+background-color: #94bfac80;
+
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+
+
+h2  span {
+font-size: 30px;
+
+}
+
+span {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 10px;
+    font-family: "Caveat", cursive; 
+    font-optical-sizing: auto;
+    
+}
+
+p {
+
+    color: white;
+    font-family: "Caveat", cursive; 
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+}
+
+.me {
+font-size: 20px;
+
+}
+
+h2.back {
+
+    background-color: #94bfac80;
+}
+
+p.me.back {
+
+    background-color: #94bfac80;
+}
+
+@media  (max-width: 900px) {
+
+    .grid-container{
+     display:block;   
+    
+    }
+
+  *    {
+        box-sizing: border-box;
+        margin-bottom: 1px;
+        padding: 0px;
+       
+       }            
+        
+}
+
+
+
+    
